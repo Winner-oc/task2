@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Bobby",
+      "email": "obasinkiri70@gmail.com",
+      "password": "ddd",
+      "password2": "ddd"
+    },
+    {
+      "username": "Nkiriobasi",
+      "email": "obasinkiri@gmail.com",
+      "password": "aaa",
+      "password2": "aaa",
+      "id": "ss-0_vg"
+    },
+    {
+      "username": "elias",
+      "email": "bobbyshawn@gmail.com",
+      "password": "bbb",
+      "password2": "bbb",
+      "id": "gEuZvXW"
+    }
+  ]
+}
