@@ -44,6 +44,7 @@ button.back-btn {
 
 .header {
     padding: 10px 40px;
+    width: 100%;
 }
 
 .header h2 {
@@ -54,12 +55,12 @@ button.back-btn {
 }
 
 .form {
-    padding: 30px 40px; 
+    padding: 10px 40px; 
 }
 
 .form-control {
-    margin-bottom: 10px;
-    padding-bottom: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
     position: relative;
 }
 
@@ -174,24 +175,15 @@ button.back-btn {
     }
 
     button.back-btn {
-        padding: 9px 26px;
-        font-size: 13px;
-        left: 15px;
+        display: none;
     }
 
     .header {
-        padding: 10px 40px 0;
+        padding: 10px 40px 10px;
     }
 
     .header h2 {
-        margin: 0;
         font-size: 18px;
-        font-weight: 600;
-    }
-
-    .form-control {
-        margin-bottom: 7px;
-        padding-bottom: 15px;
     }
 
     .form-control input {
