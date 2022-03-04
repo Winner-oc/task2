@@ -154,13 +154,13 @@ nav .icon-burger .line {
 	text-align: center;
 }
 .products .heading span {
-	font-size: 30px;
+	font-size: 1.7rem;
 	font-weight: 700;
 	color: var(--green);
 }
 .products .heading a {
 	position: absolute;
-	right: 1rem;
+	left: 0;
 	text-transform: uppercase;
 	font-size: 15px;
 	background: var(--green);
@@ -223,3 +223,90 @@ nav .icon-burger .line {
 .footer__box a:hover {
 	color: var(--black);
 }*/
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .btn {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+
+
+
+	/* Products Section */
+  .products {
+	  margin: 10rem 1rem 7rem;
+	  position: relative;
+  }
+
+  .products .heading {
+	  text-align: right;
+  }
+
+  .products .heading span {
+	  font-size: 1rem;
+  }
+
+  .products .heading a {
+	  font-size: 13px;
+	  padding: 10px;
+  }
+
+  .products .heading h2 {
+	  font-weight: 400;
+	  font-size: 1rem;
+  }
+
+}

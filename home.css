@@ -42,20 +42,18 @@ body {
 
 .btn {
 	background-color: var(--green);
-    border: none;
-    color: var(--white);
-    padding: 14px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    border-radius: 6px;
-    margin-right: 1rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease
-    font-weight: 500;
+  border: none;
+  color: var(--white);
+  padding: 14px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease
+  font-weight: 500;
 }
 .btn:hover {
 	background-color: #006400;
@@ -147,8 +145,9 @@ nav .icon-burger .line {
 }
 
 
+
 /* Home Section */
-section.home__section {
+.home__section {
 	width: 100%;
 	height: 100vh;
 	background-image: url('./img/bg.jpg');
@@ -157,45 +156,34 @@ section.home__section {
 	background-position: center; 
 	object-fit: cover;
 }
-section.home__section div.container {
-    padding: 11rem 4rem;
-    height: auto;
+.home__section div.container {
+    padding: 11rem 4rem 0;
+    height: 100%;
     color: var(--white);
 }
-section.home__section div.container h1 {
-	width: 50%;
-	font-size: 4vw;
+.home__section div.container h1 {
+	width: 100%;
+	max-width: 700px;
+	font-size: 3rem;
 	margin-bottom: 2rem;
 	line-height: 1;
 }
-section.home__section div.container p {
-	width: 50%;
-	font-size: 2vw;
+.home__section div.container p {
+	width: 100%;
+	max-width: 1100px;
+	font-size: 2rem;
 	font-weight: 200;
 	line-height: 1.5;
 }
-section.home__section div.container .links {
+.home__section div.container .links {
 	margin-top: 2rem;
 }
-section.home__section div.container .btn {
-	background-color: var(--green);
-    border: none;
+.home__section div.container .btn {
     letter-spacing: 1px;
-    color: var(--white);
-    padding: 14px;
-    text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 15px;
-    border-radius: 6px;
     margin-right: 1rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease
-    font-weight: 500;
 }
-section.home__section div.container .btn:hover {
+.home__section div.container .btn:hover {
 	background-color: #006400;
     transform: rotate(360deg);
     transform: scale(1.09);
@@ -209,7 +197,7 @@ section.home__section div.container .btn:hover {
 	flex-wrap: wrap;
 	align-items: center;
 	gap: 1.5rem;
-	padding: 8rem 4rem 7rem;
+	padding: 6rem 4rem 7rem;
 }
 .about__img {
 	flex: 1 1 15rem;
@@ -228,6 +216,7 @@ section.home__section div.container .btn:hover {
 .about__text h2 {
 	font-size: 1.7rem;
 	color: var(--green);
+	line-height: 1.7rem;
 }
 .about__text p {
 	font-size: 0.938rem;
@@ -246,13 +235,14 @@ section.home__section div.container .btn:hover {
 	text-align: center;
 }
 .products .heading span {
-	font-size: 30px;
+	font-size: 2rem;
 	font-weight: 700;
 	color: var(--green);
 }
 .products .heading h2 {
 	font-weight: 300;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
 }
 
 
@@ -282,7 +272,7 @@ section.home__section div.container .btn:hover {
 	font-size: 1.1rem;
 	font-weight: 600;
 	text-align: center;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 }
 .products__container .box .btn {
 	max-width: 120px;
@@ -290,10 +280,11 @@ section.home__section div.container .btn:hover {
 .products__container .box .details {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	position: absolute;
 	bottom: 3rem;
-	right: 3rem;
-	font-size: 1rem;
+	right: 1.5rem;
+	font-size: 0.8rem;
 	text-decoration: none;
 	color: var(--black);
 }
@@ -335,13 +326,14 @@ section.home__section div.container .btn:hover {
 }
 .footer__box h3 {
 	font-size: 1.3rem;
-	font-weight: 500;
+	font-weight: 400;
 	margin-bottom: 1rem;
 	color: black;
 }
 .footer__box a {
 	color: var(--white);
 	margin-bottom: 10px;
+	font-size: 1rem;
 }
 .footer__box a:hover {
 	color: var(--black);
@@ -359,11 +351,7 @@ section.home__section div.container .btn:hover {
 
 
 
-@media screen and (max-width: 1024px) {
-	section.home__section div.container {
-		padding: 11rem 3rem;
-	}
-}
+@media screen and (max-width: 1024px) {}
 
 
 
@@ -371,6 +359,12 @@ section.home__section div.container .btn:hover {
 
 
 @media screen and (max-width: 768px) {
+  .btn {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+
 	nav .logo {
 		float: none;
 		width: auto;
@@ -415,29 +409,94 @@ section.home__section div.container .btn:hover {
 
 
 
-
-	section.home__section {
-	    width: 100%;
-	    height: 80vh;
-	    background-image: url('./img/bg1.jpg');
-	    background-size: cover;
-	    background-repeat: no-repeat;
-	    background-position: top; 
-	    object-fit: cover;
-    }
-	section.home__section div.container {
-		padding: 11rem 2rem;
+  /* Home Section */
+	.home__section {
+	  width: 100%;
+	  height: 100vh;
+	  background-image: url('./img/bg1.jpg');
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-position: right; 
+	  object-fit: cover;
+  }
+	.home__section div.container {
+		padding: 10rem 2rem 0;
 	}
-    section.home__section div.container h1 {
-    	width: 60%;
-    	font-size: 4vw
+  .home__section div.container h1 {
+    font-size: 1.8rem;
+  }
+  .home__section div.container p {
+    font-size: 1rem;
+  }
+  .home__section div.container .btn {
+    font-size: 13px;
+  }
+
+
+
+  /* About Us Section */
+  .about__container {
+	  padding: 6rem 2rem 7rem;
+  }
+
+  .about__text h2 {
+	  font-size: 1.4rem;
+	  color: var(--green);
     }
-    section.home__section div.container p {
-    	width: 90%;
-    	font-size: 3.5vw;
+  .about__text p {
+	  font-size: 0.850rem;
+	  margin: 0.5rem 0 1.4rem;
     }
-    section.home__section div.container .btn {
-    	font-size: 13px;
-    }
-	
+
+
+
+    /* Products Section */
+  .products .heading span {
+	  font-size: 1.8rem;
+  }
+
+  .products__container .box {
+    border-radius: 1rem;
+  }
+
+  .products__container .box h3 {
+  	font-size: 1rem;
+  	margin-bottom: 5rem;
+  }
+
+  .products__container .box .btn {
+  	font-size: 13px;
+  	position: absolute;
+  	left: 0.5rem;
+  	bottom: 0.5rem;
+  }
+
+	.products__container .box .details {
+		right: 1rem;
+		bottom: 1rem;
+	  font-size: 0.7rem;
+  }
+
+  .products .main__product__page a {
+	  font-size: 1rem;
+  }
+
+
+
+  /* Footer Section */
+  .footer__container {
+  	display: flex;
+	  justify-content: space-between;
+	  padding: 2rem 2rem;
+  }
+
+  .footer__box h3 {
+	  font-size: 1rem;
+  }
+
+  .footer__box a {
+	  margin-bottom: 10px;
+	  font-size: 0.8rem;
+  }
+
 }
