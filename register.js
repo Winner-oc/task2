@@ -9,34 +9,35 @@ btnBack.addEventListener('click', () => {
 
 
 
-
 // Reference to the Form element
 const form = document.querySelector('#form');
 
 
 form.addEventListener('submit', e => {
-
       e.preventDefault();
 
-      // Getting the values from the individual input field
-      const usernameValue = document.querySelector('#username').value;
-      const emailValue = document.querySelector('#email').value;
-      const passwordValue = document.querySelector('#password').value;
-      const password2Value = document.querySelector('#password2').value;
 
+      
+      // Getting the value of the username input
+      const usernameValue = document.querySelector('#username').value;
 
       // Username checking for errors
       if(usernameValue === '') {
-            setErrorFor(username, 'Username cannot be blank');
+            setErrorFor(username, 'Username must be filled');
+      } else if (usernameValue.length < 4) {
+            setErrorFor(username, 'more than six characters is needed');
       } else {
             setSuccessFor(username);
       }
 
 
 
+      // Getting the value of the email input
+      const emailValue = document.querySelector('#email').value;
+
       // Email checking for errors
       if(emailValue === '') {
-            setErrorFor(email, 'Email cannot be blank');
+            setErrorFor(email, 'Email must be filled');
       } else if (!isEmail(emailValue)) {
             setErrorFor(email, 'Not a valid email');
       } else {
@@ -44,24 +45,37 @@ form.addEventListener('submit', e => {
       }
 
 
+      
+      // Getting the value of the password input
+      const passwordValue = document.querySelector('#password').value;
 
       // Password checking for errors
       if(passwordValue === '') {
-            setErrorFor(password, 'Password cannot be blank');
+            setErrorFor(password, 'Password must be filled');
+      } else if (passwordValue.length < 8) {
+            setErrorFor(password, 'more than eight characters are needed');
       } else {
             setSuccessFor(password);
       }
 
+
       
+      // Getting the value of the password input
+      const password2Value = document.querySelector('#password2').value;
 
       // Password2 checking for errors
       if(password2Value === '') {
-            setErrorFor(password2, 'Password cannot be blank');
+            setErrorFor(password2, 'Password must be filled');
       } else if(passwordValue !== password2Value) {
             setErrorFor(password2, 'Passwords does not match');
+      } else if (password2Value.length < 8) {
+            setErrorFor(password2, 'more than eight characters are needed');
       } else{
             setSuccessFor(password2);
       }
+
+
+
       
 
 
@@ -86,10 +100,6 @@ form.addEventListener('submit', e => {
 });
 
 
-// function checkInputs() {
-      
-
-// }
 
 
 
